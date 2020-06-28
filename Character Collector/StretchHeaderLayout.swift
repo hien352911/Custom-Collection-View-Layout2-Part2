@@ -28,6 +28,9 @@ class StretchyHeaderAttributes: UICollectionViewLayoutAttributes {
 }
 
 class StretchHeaderLayout: UICollectionViewFlowLayout {
+    override class var layoutAttributesClass: AnyClass {
+        return StretchyHeaderAttributes.self
+    }
     
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         let layoutAttributes = super.layoutAttributesForElements(in: rect) as! [StretchyHeaderAttributes]
