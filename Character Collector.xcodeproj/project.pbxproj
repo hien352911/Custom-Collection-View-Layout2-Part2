@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2E3BA8B924A8B22600D6D981 /* 06-StretchyHeaders-GettingStarted.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2E3BA8B724A8B22600D6D981 /* 06-StretchyHeaders-GettingStarted.pdf */; };
 		2E3BA8BA24A8B22600D6D981 /* 06-Challenge.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2E3BA8B824A8B22600D6D981 /* 06-Challenge.pdf */; };
+		2E3BA8BC24A8B34000D6D981 /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3BA8BB24A8B34000D6D981 /* CollectionHeaderView.swift */; };
 		F5242B2D1DEE9F3100EC44AE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5242B2C1DEE9F3100EC44AE /* DetailViewController.swift */; };
 		F53106FB1DEF581800768D8D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53106FA1DEF581800768D8D /* GradientView.swift */; };
 		F551EFFD1E1AC9BA0092F505 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F551EFFC1E1AC9BA0092F505 /* LaunchScreen.storyboard */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		2E3BA8B724A8B22600D6D981 /* 06-StretchyHeaders-GettingStarted.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "06-StretchyHeaders-GettingStarted.pdf"; sourceTree = "<group>"; };
 		2E3BA8B824A8B22600D6D981 /* 06-Challenge.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "06-Challenge.pdf"; sourceTree = "<group>"; };
+		2E3BA8BB24A8B34000D6D981 /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		F5242B2C1DEE9F3100EC44AE /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F53106FA1DEF581800768D8D /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		F551EFFC1E1AC9BA0092F505 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			children = (
 				F53106FA1DEF581800768D8D /* GradientView.swift */,
 				F577C9011DEE62FB004F074C /* CharactersCell.swift */,
+				2E3BA8BB24A8B34000D6D981 /* CollectionHeaderView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				F577C8FD1DEE51AE004F074C /* Characters.swift in Sources */,
 				F53106FB1DEF581800768D8D /* GradientView.swift in Sources */,
 				F5242B2D1DEE9F3100EC44AE /* DetailViewController.swift in Sources */,
+				2E3BA8BC24A8B34000D6D981 /* CollectionHeaderView.swift in Sources */,
 				F577C8FF1DEE61D7004F074C /* MasterViewController.swift in Sources */,
 				F577C9021DEE62FB004F074C /* CharactersCell.swift in Sources */,
 			);
