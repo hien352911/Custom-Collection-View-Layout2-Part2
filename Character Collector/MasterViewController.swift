@@ -39,6 +39,8 @@ class MasterViewController: UICollectionViewController {
     layout.itemSize = CGSize(width: width, height: 62)
     layout.minimumLineSpacing = 2
     layout.sectionInset = UIEdgeInsets(top: 2, left: 0, bottom: 2, right: 0)
+    
+    collectionView!.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

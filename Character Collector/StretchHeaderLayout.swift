@@ -12,9 +12,11 @@ class StretchHeaderLayout: UICollectionViewFlowLayout {
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         let layoutAttributes = super.layoutAttributesForElements(in: rect)!
         
+        let insets = collectionView!.contentInset
         let offset = collectionView!.contentOffset
-        if offset.y < 0 {
-            let deltaY = abs(offset.y)
+        let minY = -insets.top
+        if offset.y < minY {
+            let deltaY = abs(offset.y - minY)
             for attributes in layoutAttributes {
                 /*
                  representedElementKind: String? { get } // nil when representedElementCategory is UICollectionElementCategoryCell
@@ -22,7 +24,7 @@ class StretchHeaderLayout: UICollectionViewFlowLayout {
                 if let elementKind = attributes.representedElementKind {
                     if elementKind == UICollectionView.elementKindSectionHeader {
                         var frame = attributes.frame
-                        frame.size.height = max(0, headerReferenceSize.height + deltaY)
+                        frame.size.height = max(minY, headerReferenceSize.height + deltaY)
                         frame.origin.y = frame.minY - deltaY
                         attributes.frame = frame
                     }
