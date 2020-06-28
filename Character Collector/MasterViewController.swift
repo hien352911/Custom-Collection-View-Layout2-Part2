@@ -78,6 +78,11 @@ extension MasterViewController {
     
     return cell
   }
+    
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CharacterHeader", for: indexPath) as! CollectionHeaderView
+        return header
+    }
 }
 
 // MARK: UICollectionViewDelegate

@@ -88,7 +88,7 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Gau-Lh-bOC" customClass="CollectionHeaderView" customModule="Character_Collector" customModuleProvider="target">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="CharacterHeader" id="Gau-Lh-bOC" customClass="CollectionHeaderView" customModule="Character_Collector" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
