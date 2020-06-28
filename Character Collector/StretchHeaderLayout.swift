@@ -8,9 +8,29 @@
 
 import UIKit
 
+class StretchyHeaderAttributes: UICollectionViewLayoutAttributes {
+    var deltaY: CGFloat = 0
+    
+    override func copy(with zone: NSZone? = nil) -> Any {
+        let copy = super.copy(with: zone) as! StretchyHeaderAttributes
+        copy.deltaY = deltaY
+        return copy
+    }
+    
+    override func isEqual(_ object: Any?) -> Bool {
+        if let attributes = object as? StretchyHeaderAttributes {
+            if attributes.deltaY == deltaY {
+                return super.isEqual(object)
+            }
+        }
+        return false
+    }
+}
+
 class StretchHeaderLayout: UICollectionViewFlowLayout {
+    
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        let layoutAttributes = super.layoutAttributesForElements(in: rect)!
+        let layoutAttributes = super.layoutAttributesForElements(in: rect) as! [StretchyHeaderAttributes]
         
         let insets = collectionView!.contentInset
         let offset = collectionView!.contentOffset
@@ -26,6 +46,7 @@ class StretchHeaderLayout: UICollectionViewFlowLayout {
                         var frame = attributes.frame
                         frame.size.height = max(minY, headerReferenceSize.height + deltaY)
                         frame.origin.y = frame.minY - deltaY
+                        attributes.deltaY = deltaY
                         attributes.frame = frame
                     }
                 }
