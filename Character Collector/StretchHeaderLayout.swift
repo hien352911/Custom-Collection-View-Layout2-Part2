@@ -32,6 +32,8 @@ class StretchHeaderLayout: UICollectionViewFlowLayout {
         return StretchyHeaderAttributes.self
     }
     
+    var maximumStretchHeight: CGFloat = 0
+    
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         let layoutAttributes = super.layoutAttributesForElements(in: rect) as! [StretchyHeaderAttributes]
         
@@ -47,7 +49,12 @@ class StretchHeaderLayout: UICollectionViewFlowLayout {
                 if let elementKind = attributes.representedElementKind {
                     if elementKind == UICollectionView.elementKindSectionHeader {
                         var frame = attributes.frame
-                        frame.size.height = max(minY, headerReferenceSize.height + deltaY)
+                        /*
+                         Muốn set max = 1 giá trị const nào đó thì set min bằng giá trị const đó và biến thay đổi
+                         const ở đây là maximumStretchHeight
+                         */
+                        frame.size.height = min(max(minY, headerReferenceSize.height + deltaY), maximumStretchHeight)
+                        
                         frame.origin.y = frame.minY - deltaY
                         attributes.deltaY = deltaY
                         attributes.frame = frame

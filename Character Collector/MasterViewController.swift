@@ -35,10 +35,11 @@ class MasterViewController: UICollectionViewController {
     navigationController!.isToolbarHidden = true
     
     let width = collectionView!.bounds.width - 4.0
-    let layout = collectionViewLayout as! UICollectionViewFlowLayout
+    let layout = collectionViewLayout as! StretchHeaderLayout
     layout.itemSize = CGSize(width: width, height: 62)
     layout.minimumLineSpacing = 2
     layout.sectionInset = UIEdgeInsets(top: 2, left: 0, bottom: 2, right: 0)
+    layout.maximumStretchHeight = collectionView!.bounds.width
     
     collectionView!.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
   }
